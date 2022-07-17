@@ -15,3 +15,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.grid-item {
+  background-color: yellow;
+}
