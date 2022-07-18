@@ -22,8 +22,9 @@ function createCells() {
 function draw() {
   const cells = document.querySelectorAll(".cell");
   cells.forEach((cell) => {
-    cell.addEventListener("click", () => {
-    cell.setAttribute("style", "backround-color: blue");
+    cell.addEventListener("mouseover", () => {
+    cell.style.backgroundColor = "blue";
+    console.log("Clicked on cell");
     });
   });
 }
