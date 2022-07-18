@@ -1,18 +1,29 @@
 const grid = document.querySelector("#grid");
 const gridSize = 600;
-let cells; 
+let cell;
 let cellCount = 16;
 
-createGrid();
+createCells();
+draw();
 
-function createGrid() {
+function createCells() {
   let cellSize = cellCount => gridSize / cellCount;
 
   for (i = 0; i < cellCount; i++) {
     for (j = 0; j < cellCount; j++) {
-      cells = document.createElement("div");
-      cells.setAttribute("style", `background-color: yellow; width: ${cellSize(cellCount)}px; height: ${cellSize(cellCount)}px;`)
-      grid.appendChild(cells);
+      cell = document.createElement("div");
+      cell.setAttribute("style", `background-color: yellow; width: ${cellSize(cellCount)}px; height: ${cellSize(cellCount)}px;`);
+      cell.classList.add("cell");
+      grid.appendChild(cell);
     }
   }
+}
+
+function draw() {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach((cell) => {
+    cell.addEventListener("click", () => {
+    cell.setAttribute("style", "backround-color: blue");
+    });
+  });
 }
