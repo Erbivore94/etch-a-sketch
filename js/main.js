@@ -4,16 +4,22 @@ const defaultCellCount = 16;
 let input = defaultCellCount;
 
 createCells(input);
-draw();
 cellCountManager();
 
 function cellCountManager() {
   const cellCountButton = document.querySelector("#cellCountButton");
   cellCountButton.addEventListener("click", () => {
     let input = prompt("How many cells per axis?");
-    grid.removeChild(cell);
+    removeCells();
     createCells(input);
   })
+}
+
+function removeCells() {
+  const cells = document.getElementsByClassName("cell");
+  while (cells.length > 0) {
+    cells[0].parentNode.removeChild(cells[0]);
+  }
 }
 
 function createCells(cellCount) {
@@ -27,6 +33,7 @@ function createCells(cellCount) {
       grid.appendChild(cell);
     }
   }
+  draw();
 }
 
 function draw() {
@@ -36,8 +43,4 @@ function draw() {
     cell.style.backgroundColor = "black";
     });
   });
-}
-
-function changeCellSize() {
-  console.log("running");
 }
