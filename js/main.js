@@ -9,8 +9,10 @@ function createGrid() {
   let cellSize = cellCount => gridSize / cellCount;
 
   for (i = 0; i < cellCount; i++) {
-    gridItem = document.createElement("div");
-    gridItem.setAttribute("style", `background-color: yellow; width: ${cellSize(cellCount)}px; height: ${cellSize(cellCount)}px;`)
-    gridContainer.appendChild(gridItem);
+    for (j = 0; j < cellCount; j++) {
+      gridItem = document.createElement("div");
+      gridItem.setAttribute("style", `background-color: yellow; width: ${cellSize(cellCount)}px; height: ${cellSize(cellCount)}px;`)
+      gridContainer.appendChild(gridItem);
+    }
   }
 }
