@@ -7,7 +7,7 @@ body {
   align-items: center;
 }
 
-#grid-container-border {
+#grid-container {
   height: 650px;
   width: 650px;
   display: flex;
@@ -16,13 +16,9 @@ body {
   background-color: black;
 }
 
-#grid-container {
+#grid {
   height: 600px;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
-}
-
-.grid-item {
-  background-color: yellow;
 }
