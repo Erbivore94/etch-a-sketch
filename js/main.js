@@ -30,7 +30,7 @@ function draw() {
 }
 
 function cellCountManager() {
-  const cellCountButton = document.querySelector("#cellCountButton");
+  const cellCountButton = document.querySelector("#cell-count-button");
   cellCountButton.addEventListener("click", () => {
     let input = prompt("How many cells per axis? (Min: 8, Max: 100)");
     input = parseInt(input);

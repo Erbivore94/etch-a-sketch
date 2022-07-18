@@ -19,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   background-color: darkslategrey;
   border-radius: 25px;
 }
@@ -29,4 +29,24 @@ body {
   width: 600px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.button {
+  margin-top: 24px;
+  border: 0px;
+  height: 40px;
+  width: 200px;
+  font-size: 18px;
+  color: darkslategrey;
+  background-color: aquamarine;
+  border-radius: 15px;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
+.button:active {
+  font-weight: bold;
+  background-color: mediumaquamarine;
 }
