@@ -1,6 +1,6 @@
 const grid = document.querySelector("#grid");
 const gridSize = 600;
-let cell;
+
 let cellCount = 16;
 
 createCells();
@@ -11,7 +11,7 @@ function createCells() {
 
   for (i = 0; i < cellCount; i++) {
     for (j = 0; j < cellCount; j++) {
-      cell = document.createElement("div");
+      const cell = document.createElement("div");
       cell.setAttribute("style", `background-color: yellow; width: ${cellSize(cellCount)}px; height: ${cellSize(cellCount)}px;`);
       cell.classList.add("cell");
       grid.appendChild(cell);
