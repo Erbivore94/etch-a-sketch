@@ -6,22 +6,6 @@ let input = defaultCellCount;
 createCells(input);
 cellCountManager();
 
-function cellCountManager() {
-  const cellCountButton = document.querySelector("#cellCountButton");
-  cellCountButton.addEventListener("click", () => {
-    let input = prompt("How many cells per axis?");
-    removeCells();
-    createCells(input);
-  })
-}
-
-function removeCells() {
-  const cells = document.getElementsByClassName("cell");
-  while (cells.length > 0) {
-    cells[0].parentNode.removeChild(cells[0]);
-  }
-}
-
 function createCells(cellCount) {
   const cellSize = cellCount => gridSize / cellCount;
 
@@ -43,4 +27,23 @@ function draw() {
     cell.style.backgroundColor = "black";
     });
   });
+}
+
+function cellCountManager() {
+  const cellCountButton = document.querySelector("#cellCountButton");
+  cellCountButton.addEventListener("click", () => {
+    let input = prompt("How many cells per axis? (Min: 8, Max: 100)");
+    input = parseInt(input);
+    if (input >= 8 && input <= 100) {
+      removeCells();
+      createCells(input);
+    }
+  })
+}
+
+function removeCells() {
+  const cells = document.getElementsByClassName("cell");
+  while (cells.length > 0) {
+    cells[0].parentNode.removeChild(cells[0]);
+  }
 }
