@@ -1,13 +1,23 @@
 const grid = document.querySelector("#grid");
 const gridSize = 600;
+const defaultCellCount = 16;
+let input = defaultCellCount;
 
-let cellCount = 16;
-
-createCells();
+createCells(input);
 draw();
+cellCountManager();
 
-function createCells() {
-  let cellSize = cellCount => gridSize / cellCount;
+function cellCountManager() {
+  const cellCountButton = document.querySelector("#cellCountButton");
+  cellCountButton.addEventListener("click", () => {
+    let input = prompt("How many cells per axis?");
+    grid.removeChild(cell);
+    createCells(input);
+  })
+}
+
+function createCells(cellCount) {
+  const cellSize = cellCount => gridSize / cellCount;
 
   for (i = 0; i < cellCount; i++) {
     for (j = 0; j < cellCount; j++) {
@@ -24,7 +34,10 @@ function draw() {
   cells.forEach((cell) => {
     cell.addEventListener("mouseover", () => {
     cell.style.backgroundColor = "black";
-    console.log("Clicked on cell");
     });
   });
+}
+
+function changeCellSize() {
+  console.log("running");
 }
