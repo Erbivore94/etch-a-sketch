@@ -1,5 +1,5 @@
 const grid = document.querySelector("#grid");
-const gridSize = 600;
+const gridSize = 500;
 const defaultCellCount = 16;
 let input = defaultCellCount;
 

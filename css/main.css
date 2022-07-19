@@ -14,8 +14,8 @@ body {
 }
 
 #grid-container {
-  height: 650px;
-  width: 650px;
+  height: 550px;
+  width: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,17 +25,17 @@ body {
 }
 
 #grid {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .button {
-  margin-top: 24px;
+  margin: 36px;
   border: 0px;
-  height: 40px;
-  width: 200px;
+  height: 50px;
+  width: 250px;
   font-size: 18px;
   color: #F1FAEE;
   background-color: #E63946;
